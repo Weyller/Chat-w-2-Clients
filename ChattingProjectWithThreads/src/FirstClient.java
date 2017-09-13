@@ -55,7 +55,7 @@ public class FirstClient extends javax.swing.JFrame {
 
         jSplitPane1.setRightComponent(jScrollPane2);
 
-        SendButton.setText("ارسال");
+        SendButton.setText("Send Message");
         SendButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SendButtonActionPerformed(evt);
@@ -63,7 +63,7 @@ public class FirstClient extends javax.swing.JFrame {
         });
 
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel1.setText("Done by : Mohammed M. AL-Banna ||  Website : www.MBanna.info");
+        jLabel1.setText("Grasset Chat 2017");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -147,7 +147,7 @@ public class FirstClient extends javax.swing.JFrame {
         try {
             SendSocket = new Socket("127.0.0.1", 12346);
             DataOutputStream out = new DataOutputStream(SendSocket.getOutputStream());
-            out.writeUTF("The Server Said : " + text);
+            out.writeUTF("Client 1 Said : " + text);
             RecievedArea.append("\n I said : " + text);
         } catch (Exception e) {
             System.out.println(e);
